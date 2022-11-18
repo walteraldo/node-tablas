@@ -17,13 +17,14 @@ const argv = require('yargs')
     default: 10,
     describe: 'Este es el número hasta donde quieres la tabla'
   })
-  .check((argv, options ) => {
-    if(isNaN(argv.b)) {
-      throw 'La base tiene que se un número'
-    } 
+  .check((argv, options) => {
+    if(isNaN(argv.b)){
+      throw 'La base tiene que ser un número'
+    }
     return true;
   })
   .argv;
 
+  module.exports = argv;
 
-module.exports = argv;
+
